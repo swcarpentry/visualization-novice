@@ -21,7 +21,7 @@ permalink: /design/
         *   May use VMs or cloud resources at instructor's discretion
         *   Must also setup native local install as an option
     *   May draw from [r-novice-gapminder lesson][r-novice-gapminder]
-        *   How much time do we spend to introduce tidy data structure, `dplyr`, `tidyr`?
+        *   How much time do we spend to (re)introduce tidy data structure, `dplyr`, `tidyr`?
     *   Use R Studio for project management and live coding
 *   Data
     *   Use the [Gapminder data][gapminder-data] throughout
@@ -45,91 +45,86 @@ permalink: /design/
 
 ### Goals
 
-1.  Get learners to the stage described in the "Software" section of
-    "[Good Enough Practices in Scientific Computing][good-enough]".
-    *   Goals
-        1.  Make it easy for people (including your future self) to understand and (re)use your code
-        2.  Modular, comprehensible, reusable, and testable all come together
-    *   Rules
-        1.  Every analysis step is represented textually (complete with parameter values)
-        2.  Every program or script has a brief explanatory comment at the start
-        3.  Programs of all kinds (including "scripts") are broken into functions
-        4.  No duplication
-        5.  Functions and variables have meaningful names
-        6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
-            *   This rule is *not* covered in this lesson
-        7.  Commenting/uncommenting are not routinely used to control program behavior
-        8.  Use a simple example or test data set to run to tell if it's working at all and whether it gives a known correct output for a simple known input
-        9.  Submit code to a reputable DOI-issuing repository upon submission of paper, just like data
-            *   This rule is *not* covered in this lesson
-2.  Enable them to make sense of other onlines tutorials and resources
+1.  Learners will be able to navigate [Choosing a Good Chart][good-chart].
+    *   The appropriate graphic should be chosen in service to the scientific question/hypothesis that is to be addressed with data.
+    *   Key decisions
+        1.  What is the composition of the data/results to communicate?
+            *   Relationship
+            *   Comparison
+            *   Distribution
+            *   Composition
+        2.  How many variables or categories need to be conveyed?
+            * Is one of those variables time?
+        3.  How much data is available for each variable or category?
+        4.  Are absolute or relative values more appropriate to communicate?
+2.  Learners will be able to implement the appropriate graphical device using `dplyr` and `ggplot2`.
+    *   Basic graphing layers
+        *   `ggplot()` 
+        *   `aes()`
+        *   `geom_line()`
+        *   `geom_bar()`
+        *   `geom_smooth()`
+        *   `geom_point()`        
+        *   `geom_boxplot()`
+        *   `geom_smooth()`
+    *   Multiple plots
+        *   `facet_grid()`
+        *   `facet_wrap()`
+    *   Dataset and aesthetic adjustments (*Publication quality figures*)
+        *   `scale_manual()`
+        *   `lims()`
+        *   `labs()`
+        *   `guide_legend()`
+        *   `theme()`        
 
 ### Summative Assessment
 
-*   Midpoint: plot a bar chart showing the average GDP per continent from the data.
-*   Final: given a two-page analysis program made up of five functions:
-    1.  Modify the input function to read data that is laid out differently (but is still tabular).
-    2.  Find and fix a bug in the analysis routine (off-by-one error).
-    3.  Add an option to create a plot instead of dumping results as CSV.
+*   Midpoint: Given a research question and some data, choose the best chart.
+*   Final: Evaluate a two-page report generated from code that includes four or five pairs of research questions and charts:
+    1.  Modify some data that is laid out differently (*but is still tabular*) than what is required by the graphing process.
+    2.  Find and fix a chart that is not the best option to address the research question.
+    3.  Modify one chart to be publication quality.
 
 ### Essential Questions
 
 How do I...
 
 *   ...read, analyze, and visualize a tabular data set?
-*   ...process multiple data sets?
-*   ...tell if my program is working correctly?
-*   ...fix it when it's not?
-*   ...find and use software other people have written instead of writing my own?
+*   ...manipulate, summarize, and analyze data to answer a research question?
+*   ...choose the best chart to answer my research question?
+*   ...generate the best chart to answer my research question?
+*   ...produce a publication quality version of my chart?
 
 ### Learners Will Be Able To...
 
-*   Run code interactively
-*   Run code saved in a file
-*   Write single-condition `if` statements
-*   Convert between basic data types (integer, float, string)
-*   Call built-in functions
-*   Use `help` and online documentation
-*   Import a library using an alias
-*   Call something from an imported library
-*   Read tabular data into an array or data frame
-*   Do collective operations on arrays and data frames
-*   Create simple plots of data in arrays and data frames
-*   Interpret common error messages
-*   Track down bugs by running small tests of program modules
-*   Write non-recursive functions taking a fixed number of named parameters
-*   Create literate programs in the Jupyter Notebook
+*   Interactively generate analysis code and save it in a file
+*   Read tabular data into a data frame
+*   Manipulate and summarize tabular data using `dplyr`
+*   Generate publication quality charts using `ggplot2`
+*   Access `help()`, vignette tutorials, and online documentation
+*   Interpret common error/warning messages from `dplyr` and `ggplot2`
 
 ### Learners Will Know...
 
+*   That a clearly defined research question is essential to a successful analysis and graphical representation of the results
+*   That charts should be chosen to best answer the research question
 *   That a program is a piece of lab equipment that implements an analysis
-    *   Needs to be validated/calibrated before/during use
+    *   Needs to be validated/calibrated before/during use (*not* covered)
     *   Makes analysis reproducible, reviewable, shareable
-*   That programs are written for people, not for computers
+*   that analytical programs are written for people, not for computers and should include:
     *   Meaningful variable names
     *   Modularity for readability as well as re-use
-    *   No duplication
-    *   Document purpose and use
-*   That there is no magic: the programs they use are no different in principle from those they build
-*   How to assign values to variables
-*   What integers, floats, strings, and data frames are
-*   How to trace the execution of a `for` loop
-*   How to create and index lists
-*   How to trace the execution of `if`/`else` statements
-*   The difference between defining and calling a function
-*   What a call stack is
-*   Where to find documentation on standard libraries
-*   How to find out what else scientific Python offers
+    *   Documented purpose and use
+*   Where to find documentation on `dplyr` and `ggplot2`
+*   How to find out what other graphical software R offers
 
 ## Stage 2 - Learning Plan
 
-This section originally presented a point-form outline of the lesson episodes
-with time estimates for teaching and exercises.
-That information is now in the syllabus on the front page.
+*To Do: point-form outline of the lesson episodes with time estimates for teaching and exercises.*
 
 [r-novice-gapminder]: http://swcarpentry.github.io/r-novice-gapminder/
 [dc-website]: http://datacarpentry.org
 [gapminder-data]: http://www.gapminder.org/data/
-[good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
+[good-chart]: http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
 [instructor-training]: https://swcarpentry.github.io/instructor-training/
 [swc-website]: http://software-carpentry.org
