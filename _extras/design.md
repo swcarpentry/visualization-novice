@@ -6,22 +6,25 @@ permalink: /design/
 ## Stage 0 - Assumptions
 
 *   Audience
-    *   Graduate students and practicing scientists 
-        *   Materials not specific to discipline
+    *   Graduate students and practicing scientists in numerate disciplines from cosmology to economics
+        *   Lesson content broadly applicable across disciplines
+        *   Lesson examples from population demography ([Gapminder data][gapminder-data]) 
     *   Must understand basic data management and manipulation 
         *   Likely worked with spreadsheets and interactive stats tools (SAS)
-    *   Must understand basic statistics (mean, stdev, lm)
-    *   Might have some limited programming experience
+        *   Familiar with tabular data structure
+        *   Familiar with filtering and summarizing data in groups
+        *   Understands basic statistics (mean, stdev, lm) to compare groups
+    *   Should have some limited programming experience in R, including:
+        *   How to load a CSV (`read.csv()`) 
+        *   Basic `dplyr` function (`filter()`, `summarize()`, etc.)
+        *   Best preparedness benchmark from [r-novice-gapminder lesson][r-novice-gapminder]
 *   Constraints
-    *   One full day 09:00-17:00
-        *   06:30 teaching time
-        *   1:00 for lunch
-        *   0:30 total for two coffee breaks
+    *   One half day 0:00-4:00
+        *   3:45 teaching time
+        *   0:15 coffee break
     *   Learners use native installs on their own machines
         *   May use VMs or cloud resources at instructor's discretion
         *   Must also setup native local install as an option
-    *   May draw from [r-novice-gapminder lesson][r-novice-gapminder]
-        *   How much time do we spend to (re)introduce tidy data structure, `read.csv()`, `dplyr`, `tidyr`?
     *   Use RStudio for project management and live coding
 *   Data
     *   Use the [Gapminder data][gapminder-data] throughout
@@ -67,7 +70,7 @@ permalink: /design/
         *   `geom_point()`        
         *   `geom_boxplot()`
         *   `geom_smooth()`
-    *   Multiple plots
+    *   Facet subplots
         *   `facet_grid()`
         *   `facet_wrap()`
     *   Dataset and aesthetic adjustments (*Publication quality figures*)
@@ -79,7 +82,7 @@ permalink: /design/
 
 ### Summative Assessment
 
-*   Midpoint: Given a research question and some data, choose the best chart.
+*   Midpoint: Given a research question and some data, choose and generate the best chart.
 *   Final: Evaluate an analysis report generated from code that includes four or five pairs of research questions and charts:
     1.  Modify some data that is laid out differently (*but is still tabular*) than what is required by the graphing process
     2.  Find and fix a chart that is not the best option to address the research question
@@ -101,20 +104,13 @@ How do I...
 *   Read tabular data into a data frame
 *   Manipulate and summarize tabular data using `dplyr`
 *   Generate publication quality charts using `ggplot2`
+*   Critique others' choices of charts and esthetics and express how to improve them
 *   Access `help()`, vignette tutorials, and online documentation
 *   Interpret common error/warning messages from `dplyr` and `ggplot2`
 
 ### Learners Will Know...
 
 *   That a clearly defined research question is essential to a successful analysis and graphical representation of the results
-*   That charts should be chosen to best answer the research question
-*   That a program is a piece of lab equipment that implements an analysis
-    *   Needs to be validated/calibrated before/during use (*not* covered)
-    *   Makes analysis reproducible, reviewable, shareable
-*   That analytical programs are written for people, not for computers and should include:
-    *   Meaningful variable names
-    *   Modularity for readability as well as re-use
-    *   Documented purpose and use
 *   Where to find documentation on `dplyr` and `ggplot2`
 *   How to find out what other graphical software R offers
 
