@@ -69,3 +69,19 @@ ggplot(pop_2007, aes(population/1000000)) +
   theme(axis.title=element_text(size=36))
 
 # 4. Stacked column/area chart - composition changing over time
+
+total_pop_continent<- pop_by_continent %>%
+  group_by(continent, year) %>%
+  summarize(tot_pop = sum(population)/1000000000)
+
+# Bad
+ggplot(total_pop_continent, aes(as.numeric(year), tot_pop, group = continent)) +
+  geom_line(position = "stack")
+
+# Good
+ggplot(total_pop_continent, aes(as.numeric(year), tot_pop, fill = continent)) + 
+  geom_area() +
+  labs(x = "Year", y = "Population [billions]", 
+       fill = "Continent") +
+  theme_classic(base_size = 24, base_family = "Helvetica") +
+  theme(axis.title=element_text(size=36))
