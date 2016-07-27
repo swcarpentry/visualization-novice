@@ -15,16 +15,16 @@ permalink: /design/
         *   Familiar with filtering and summarizing data in groups
         *   Understands basic statistics (mean, stdev, lm) to compare groups
     *   Should have some limited programming experience in R, including:
+        *   Content from Lessons 00 - 04 of Data Carpentry's [analyzing ecological data in R][R-ecology-lesson]
         *   How to load a CSV (`read.csv()`) 
         *   Basic `dplyr` function (`filter()`, `summarize()`, etc.)
-        *   Best preparedness benchmark from [r-novice-gapminder lesson][r-novice-gapminder]
 *   Constraints
     *   One half day 0:00-4:00
         *   3:45 teaching time
         *   0:15 coffee break
     *   Learners use native installs on their own machines
-        *   May use VMs or cloud resources at instructor's discretion
-        *   Must also setup native local install as an option
+        *   Must setup native local install prior to lesson
+        *   No time is included in schedule for software setup
     *   Use RStudio for project management and live coding
 *   Data
     *   Use the [Gapminder data][gapminder-data] throughout
@@ -118,7 +118,7 @@ How do I...
 
 *To Do: point-form outline of the lesson episodes with time estimates for teaching and exercises.*
 
-[r-novice-gapminder]: http://swcarpentry.github.io/r-novice-gapminder/
+[R-ecology-lesson]: http://www.datacarpentry.org/R-ecology-lesson/
 [dc-website]: http://datacarpentry.org
 [gapminder-data]: http://www.gapminder.org/data/
 [good-chart]: http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
