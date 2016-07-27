@@ -30,8 +30,7 @@ ggplot(Africa, aes(log10(pop_2007), ..count..)) +
 ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
   geom_smooth() +
   geom_point() +
-  labs(x = "gdpPercap", y = "lifeExp", 
-       size = "Population", title = "2007") +
+  labs(x = "gdpPercap", y = "lifeExp", size = "Population", title = "2007") +
   theme_classic()
 
 # Good
@@ -47,4 +46,26 @@ ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007,
   theme(axis.title=element_text(size=36))
 
 # 3. Faceted bar chart - comparison among many items/categories
+
+pop_by_continent <- data %>%
+  gather(year, population, pop_1952:pop_2007) %>%
+  separate(year, c("pop", "year"), sep = "_") %>%
+  select(continent, country, year, population)
+
+pop_2007 <- filter(pop_by_continent, year==2007)
+
+# Bad
+ggplot(pop_2007, aes(log10(population))) +
+  geom_histogram() +
+  facet_grid(. ~ continent)
+
+# Good
+ggplot(pop_2007, aes(population/1000000)) +
+  geom_histogram(binwidth=0.5) +
+  scale_x_log10(limits = c(0.1, 1000)) +
+  facet_grid(. ~ continent) +
+  labs(x = "Population [millions]", y = "Number of countries", title = "2007") +
+  theme_bw(base_size = 24, base_family = "Helvetica") +
+  theme(axis.title=element_text(size=36))
+
 # 4. Stacked column/area chart - composition changing over time
