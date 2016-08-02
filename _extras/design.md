@@ -116,154 +116,115 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
-### Running and Quitting Interactively
-
-*   Teaching: 15 min (because setup issues)
-*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
-    *   Run the Notebook
-    *   Create a few Markdown cells
-    *   Create and execute a Python cell that prints 1+2
-
-### Variables and Assignment
-
-*   Teaching: 5 min
-*   Exercises: 5 min
-    *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
-    *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
-
-### Data Types and Type Conversion
-
-*   Teaching: 5 min
-*   Exercises: 5 min
-    *   Predict result types (or errors) of various operations
-    *   Add conversion functions to broken code to make it work
-
-### Built-in Functions (and Methods) and Help
-
-*   Teaching: 5 min
-*   Exercises: 5 min
-    *   Chain calculations with max and min
-    *   Find a useful method using help(str)
-    *   Parsons Problem to achieve specific results with string methods
-
-### Error Messages
-
-*   Teaching: 10 min (review of error messages seen to date)
-*   Exercises: 10 min
-    *   Diagnose and fix small errors (some syntax, some runtime)
-
-### Libraries (Including Aliases)
-
-*   Teaching: 5 min
-*   Exercises: 5 min
-    *   Operations with math library
-    *   Look things up in the python.org docs
-
-### Pandas Data Frames
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Import Pandas
-    *   Create and display a data frame
-
-### Reading Tabular Data
-
-*   Teaching: 5 min
-*   Exercises: 5 min
-    *   Read one continent's subset of gapminder CSV data
-*   Callout:
-    *   How to read data from Excel spreadsheets via export to CSV
-    *   How tor ead data from Excel spreadsheets directly (needs another library)
-
-### Collective Operations
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Select various subsets of data
-    *   Normalize values (scale to 0..1)
-
-### Plotting
-
-*   Teaching: 10 min (to show a variety of plots and debug display problems)
-*   Exercises: 5 min
-    *   Plot normalized change in GDP over time (tweaking provided code)
-
-### For Loops
-
-*   Teaching: 15 min (do *not* introduce lists)
-*   Exercises: 10 min
-    *   Reverse a string by repeated append
-    *   Trace execution of loop
-
-### Looping Over Data Sets
-
-*   Teaching: 10 min (use glob to get filenames)
-*   Exercises: 15 min
-    *   Count rows of each data set
-    *   Check number of columns in each data set is the same
-
-### *Lunch Break*
-
-### Lists
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Indexing exercises
-    *   Conversion from list to string and back
-    *   Sum values in a list
-
-### Conditionals
-
-*   Teaching: 10 min (inside loop)
-*   Exercises: 15 min
-    *   Count vowels
-    *   Report badly-sized files inside loop
-
-### Writing Functions
+### Introductions and Learning Objectives
 
 *   Teaching: 15 min
-*   Exercises: 15 min
-    *   Check size of a single data file
-    *   Check sizes of all data files in a directory
-        *   Write new function using previous function
+*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+    *   Ensure setup issues resolved
+    *   Assess how much `dplyr` review will be necessary
 
-### Documentation
+### Data Management in R
 
-*   Teaching: 5 min
-*   Exercises: 10 min
-    *   Add docstrings to functions written earlier
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Import Gapminder data (`read.csv()`)
+    *   Gapminder data structure (`str()`, `head()`)
 
-### Programming Style
-
-*   Teaching: 10 min (mostly to introduce checklist)
-*   Exercises: 15 min
-    *   Clean up badly-written 20-line program
-
-### Debugging
-
-*   Teaching: 10 min (divide and conquer)
-*   Exercises: 15 min
-    *   Debug three-function program
-
-### Defensive Programming
+### Data Structures
 
 *   Teaching: 5 min
-*   Exercises: 10 min
-    *   Add assertions to functions based on docstrings
+*   Exercises: 5 min
+    *   Variables and categories
+    *   Values and replicates
+    *   Absolute values vs. relative values
 
-### Programming with Arrays
+### `dplyr` Recap
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   `select()`
+    *   `filter()`
+    *   `group_by()`
+    *   `summarize()`
+
+### Scientific Questions and Hypotheses
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Define: distribution, relationship, comparison, composition
+
+### Introduce 'Choosing a Good Chart'
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Chart dependends on scientific question and data structure
+    *   "How was the population of Africa distributed across the continent by country in 2007?" 
+
+### `ggplot`: Grammar of Graphics
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Aesthetics mapping
+    *   Layers
+    *   Themes
+
+### Line Histogram
 
 *   Teaching: 10 min
 *   Exercises: 10 min
-    *   More complicated array indexing
+    *   Single variable distribution with many points
+    *   "How was the population of Africa distributed across the continent by country in 2007?"
+    *   `geom_histogram()`, `geom_density()`
+
+### Publication Quality Figures
+
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   `labs()`
+    *   `theme()`
+    *   Midpoint assessment
+
+### *Coffee Break* 15 min
+
+### Bubble Chart
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Relationship with three variables
+    *   "What is the relationship of GDP per capita, life expectancy, and population across the world per country in 2007?"
+    *   `geom_point()`, `geom_smooth()`
+    *   `scale_manual()`
+
+### Tidy Data Structure
+
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   Time series data
+
+### Facetted Table of Histogram Bar Charts
+
+*   Teaching: 5 min
+*   Exercises: 15 min
+    *   Comparison among many items/categories
+    *   "How was the world population distributed among continents in 2007?"
+    *   `facet_grid()`
+    *   `lims()`
+
+### Stacked Area Chart
+
+*   Teaching: 5 min
+*   Exercises: 15 min
+    *   Composition changing over time
+    *   "How has the composition of the world population among continents changed from 1952-2007?"
+    *   `geom_line()`, `geom_area()`
+    *   `guide_legend()`
+    *   Final Assessment
 
 ### Wrap-Up
 
-*   Teaching: 25 min
-    *   Overview of key SciPy modules
-    *   How to find and install libraries
-    *   Running Python from the command line
-    *   Other editing tools
+*   Teaching: 10 min
+    *   Overview of choosing a good chart and `ggplot2`
+    *   Other R graphing tools (i.e., interactive)
 *   Exercises: 0 min
 
 
