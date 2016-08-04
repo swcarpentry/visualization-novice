@@ -121,7 +121,7 @@ How do I...
 *   Teaching: 15 min
 *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
     *   Ensure setup issues resolved
-    *   Assess how much `dplyr` review will be necessary
+    *   Assess how much `dplyr` review will be necessary (15 min alotted below)
 
 ### Data Management in R
 
@@ -201,7 +201,7 @@ How do I...
 *   Exercises: 5 min
     *   Time series data
 
-### Facetted Table of Histogram Bar Charts
+### Faceted Table of Histogram Bar Charts
 
 *   Teaching: 5 min
 *   Exercises: 15 min
