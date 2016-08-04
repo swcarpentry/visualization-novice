@@ -116,7 +116,117 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
-*To Do: point-form outline of the lesson episodes with time estimates for teaching and exercises.*
+### Introductions and Learning Objectives
+
+*   Teaching: 15 min
+*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+    *   Ensure setup issues resolved
+    *   Assess how much `dplyr` review will be necessary (15 min alotted below)
+
+### Data Management in R
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Import Gapminder data (`read.csv()`)
+    *   Gapminder data structure (`str()`, `head()`)
+
+### Data Structures
+
+*   Teaching: 5 min
+*   Exercises: 5 min (identify data structure features in Gapminder data)
+    *   Variables and categories
+    *   Values and replicates
+    *   Absolute values vs. relative values
+
+### `dplyr` Recap
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   `select()`
+    *   `filter()`
+    *   `group_by()`
+    *   `summarize()`
+
+### Scientific Questions and Hypotheses
+
+*   Teaching: 10 min
+*   Exercises: 5 min (match column A to B: structure term to question) 
+    *   Define: distribution, relationship, comparison, composition
+
+### Introduce 'Choosing a Good Chart'
+
+*   Teaching: 10 min
+*   Exercises: 5 min
+    *   Chart dependends on scientific question and data structure
+    *   "How was the population of Africa distributed across the continent by country in 2007?" 
+
+### `ggplot`: Grammar of Graphics
+
+*   Teaching: 10 min
+*   Exercises: 5 min (Parsons Problem with components and form of `ggplot`)
+    *   Aesthetics mapping
+    *   Layers
+    *   Themes
+
+### Line Histogram
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Single variable distribution with many points
+    *   "How was the population of Africa distributed across the continent by country in 2007?"
+    *   `geom_histogram()`, `geom_density()`
+
+### Publication Quality Figures
+
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   `labs()`
+    *   `theme()`
+    *   Midpoint assessment
+
+### *Coffee Break* 15 min
+
+### Bubble Chart
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Relationship with three variables
+    *   "What is the relationship of GDP per capita, life expectancy, and population across the world per country in 2007?"
+    *   `geom_point()`, `geom_smooth()`
+    *   `scale_manual()`
+
+### Tidy Data Structure
+
+*   Teaching: 5 min
+*   Exercises: 5 min (Faded Problem to get `data.frame` for 'Faceted Table')
+    *   Time series data
+
+### Faceted Table of Histogram Bar Charts
+
+*   Teaching: 5 min
+*   Exercises: 15 min
+    *   Comparison among many items/categories
+    *   "How was the world population distributed among continents in 2007?"
+    *   `facet_grid()`
+    *   `lims()`
+
+### Stacked Area Chart
+
+*   Teaching: 5 min
+*   Exercises: 15 min
+    *   Composition changing over time
+    *   "How has the composition of the world population among continents changed from 1952-2007?"
+    *   `geom_line()`, `geom_area()`
+    *   `guide_legend()`
+    *   Final Assessment
+
+### Wrap-Up
+
+*   Teaching: 10 min
+    *   Overview of choosing a good chart and `ggplot2`
+    *   Other R graphing tools (i.e., interactive)
+*   Exercises: 0 min
+
 
 [R-ecology-lesson]: http://www.datacarpentry.org/R-ecology-lesson/
 [dc-website]: http://datacarpentry.org
