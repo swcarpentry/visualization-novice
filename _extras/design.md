@@ -133,7 +133,7 @@ How do I...
 ### Data Structures
 
 *   Teaching: 5 min
-*   Exercises: 5 min
+*   Exercises: 5 min (identify data structure features in Gapminder data)
     *   Variables and categories
     *   Values and replicates
     *   Absolute values vs. relative values
@@ -150,7 +150,7 @@ How do I...
 ### Scientific Questions and Hypotheses
 
 *   Teaching: 10 min
-*   Exercises: 5 min
+*   Exercises: 5 min (match column A to B: structure term to question) 
     *   Define: distribution, relationship, comparison, composition
 
 ### Introduce 'Choosing a Good Chart'
@@ -163,7 +163,7 @@ How do I...
 ### `ggplot`: Grammar of Graphics
 
 *   Teaching: 10 min
-*   Exercises: 5 min
+*   Exercises: 5 min (Parsons Problem with components and form of `ggplot`)
     *   Aesthetics mapping
     *   Layers
     *   Themes
@@ -198,7 +198,7 @@ How do I...
 ### Tidy Data Structure
 
 *   Teaching: 5 min
-*   Exercises: 5 min
+*   Exercises: 5 min (Faded Problem to get `data.frame` for 'Faceted Table')
     *   Time series data
 
 ### Faceted Table of Histogram Bar Charts
