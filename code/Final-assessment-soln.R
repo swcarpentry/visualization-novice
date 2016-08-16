@@ -21,9 +21,9 @@ ggplot(Africa, aes(log10(pop_2007))) +
 # Good
 ggplot(Africa, aes(log10(pop_2007), ..count..)) +
   geom_density() +
-  labs(x = "Log10( 2007 Population )", y = "Density") +
+  labs(x = "Log10( 2007 Population )", y = "Count") +
   theme_classic(base_size = 24, base_family = "Helvetica") +
-  theme(axis.title=element_text(size=36))
+  theme(axis.title = element_text(size = 36))
 
 # 2. Bubble chart - relationship with three variables
 # Bad
@@ -43,7 +43,7 @@ ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007,
   labs(x = "GDP/capita [adjusted US$]", y = "Life Expectancy [years]", 
        size = "Population [millions]", title = "2007") +
   theme_classic(base_size = 24, base_family = "Helvetica") +
-  theme(axis.title=element_text(size=36))
+  theme(axis.title = element_text(size = 36))
 
 # 3. Faceted bar chart - comparison among many items/categories
 
@@ -66,7 +66,7 @@ ggplot(pop_2007, aes(population/1000000)) +
   facet_grid(. ~ continent) +
   labs(x = "Population [millions]", y = "Number of countries", title = "2007") +
   theme_bw(base_size = 24, base_family = "Helvetica") +
-  theme(axis.title=element_text(size=36))
+  theme(axis.title = element_text(size = 36))
 
 # 4. Stacked column/area chart - composition changing over time
 
@@ -84,4 +84,4 @@ ggplot(total_pop_continent, aes(as.numeric(year), tot_pop, fill = continent)) +
   labs(x = "Year", y = "Population [billions]", 
        fill = "Continent") +
   theme_classic(base_size = 24, base_family = "Helvetica") +
-  theme(axis.title=element_text(size=36))
+  theme(axis.title = element_text(size = 36))
