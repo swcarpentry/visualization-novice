@@ -116,109 +116,251 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
+#### Exercises Note
+
+*   For coding problems (i.e., Parsons, Faded, Fix the Code), students will be 
+    given an output solution (i.e., `data.frame`, graphic) corresponding to
+    the desired code solution.
+*   Learning plan [code solution][code-solution]
+
 ### Introductions and Learning Objectives
 
 *   Teaching: 15 min
-*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
     *   Ensure setup issues resolved
-    *   Assess how much `dplyr` review will be necessary (15 min alotted below)
+    *   Assess how much `dplyr` review will be necessary (15 min allotted below)
+*   Exercises: 0 min
+    *   Accounted for in teaching time (no separate exercise)
 
 ### Data Management in R
 
 *   Teaching: 10 min
-*   Exercises: 5 min
     *   Import Gapminder data (`read.csv()`)
     *   Gapminder data structure (`str()`, `head()`)
+*   Exercises: 5 min
+    *   "How many rows are in the Gapminder Data?"
+        A.  6  
+        B.  38  
+        C.  142  
+        D.  2007
+    *   "How many columns are in the Gapminder Data?"
+        A.  6  
+        B.  38  
+        C.  142  
+        D.  2007
 
 ### Data Structures
 
 *   Teaching: 5 min
-*   Exercises: 5 min (identify data structure features in Gapminder data)
     *   Variables and categories
     *   Values and replicates
     *   Absolute values vs. relative values
+*   Exercises: 5 min 
+    *   Identify data structure features in Gapminder data
+    *   "What years are represented in the Gapminder data?
+        A.  1952-2007
+    *   "Which variable is more appropriate to group by? Why?"
+        A. country
+        B. gdpPercap    
 
 ### `dplyr` Recap
 
 *   Teaching: 10 min
-*   Exercises: 5 min
     *   `select()`
     *   `filter()`
     *   `group_by()`
     *   `summarize()`
+*   Exercises: 5 min
+    *   "How many countries are in Africa?"
+        `Africa <- filter(data, continent=="Africa")`
+        A.  5
+        B.  38
+        C.  52
+        D.  142
+    *   "Make a `data.frame` that stores the count of countries per continent?"
+
+        ```
+        count_countries <- data %>%
+        group_by(continent) %>%
+        summarize(countries = n())
+        ```
+
+        ```
+        > count_countries
+        Source: local data frame [5 x 2]
+        
+          continent countries
+             (fctr)     (int)
+        1    Africa        52
+        2  Americas        25
+        3      Asia        33
+        4    Europe        30
+        5   Oceania         2
+        ```
 
 ### Scientific Questions and Hypotheses
 
 *   Teaching: 10 min
-*   Exercises: 5 min (match column A to B: structure term to question) 
     *   Define: distribution, relationship, comparison, composition
+*   Exercises: 5 min 
+    *   Match Column A structure term to Column B question
+    *   Column A
+        *   Comparison
+        *   Distribution
+        *   Relationship
+        *   Composition
+    *   Column B
+        *   "How was the population of Africa distributed across the continent
+            by country in 2007?"
+        *   "What is the relationship of GDP per capita, life expectancy, and 
+            population across the world per country in 2007?"
+        *   "How was the world population distributed among continents in 2007?"
+        *   "How has the composition of the world population among continents 
+            changed from 1952-2007?"
 
 ### Introduce 'Choosing a Good Chart'
 
 *   Teaching: 10 min
-*   Exercises: 5 min
-    *   Chart dependends on scientific question and data structure
+    *   Chart depends on scientific question and data structure
     *   "How was the population of Africa distributed across the continent by country in 2007?" 
+*   Exercises: 5 min
+    *   Add letter labels to ~7 figures on [Choosing a Good Chart][good-chart] 
+    *   "Match the 'Scientific Questions and Hypotheses' exercise answers with 
+        the corresponding graphic on [Choosing a Good Chart][good-chart]."
 
 ### `ggplot`: Grammar of Graphics
 
 *   Teaching: 10 min
-*   Exercises: 5 min (Parsons Problem with components and form of `ggplot`)
     *   Aesthetics mapping
     *   Layers
     *   Themes
+*   Exercises: 5 min 
+    *   Parsons Problem with components and form of `ggplot2`
+
+        ```
+        geom_histogram() +
+        labs(x = "Log10( 2007 Population )", y = "Count") 
+        ggplot(Africa, aes(log10(pop_2007))) +
+        ```
 
 ### Line Histogram
 
 *   Teaching: 10 min
-*   Exercises: 10 min
     *   Single variable distribution with many points
     *   "How was the population of Africa distributed across the continent by country in 2007?"
     *   `geom_histogram()`, `geom_density()`
+*   Exercises: 10 min
+    *   Faded Problem
+
+        ```
+        ggplot(Africa, aes(________, ..count..)) +
+          geom_density() ________
+          labs(x = "Log10(________)", y = "Count") 
+        ```
 
 ### Publication Quality Figures
 
 *   Teaching: 5 min
-*   Exercises: 5 min
     *   `labs()`
     *   `theme()`
     *   Midpoint assessment
+*   Exercises: 5 min
+    * Faded Problem Continued
+
+        ```
+        ggplot(________) +
+          ________ +
+          labs(________, y = "Count") +
+          theme_classic(base_size = 24, base_family = ________) +
+          theme(axis.title = element_text(size = 36))
+       ```
 
 ### *Coffee Break* 15 min
 
 ### Bubble Chart
 
 *   Teaching: 10 min
-*   Exercises: 10 min
     *   Relationship with three variables
     *   "What is the relationship of GDP per capita, life expectancy, and population across the world per country in 2007?"
     *   `geom_point()`, `geom_smooth()`
     *   `scale_manual()`
+*   Exercises: 10 min
+    *   Parsons Problem with blanks
+
+        ```
+        ggplot(data, aes(x = ________, y = ________, size = pop_2007)) +
+        geom_point() +
+        theme_classic()
+        geom_smooth() +
+        labs(x = ________, y = ________, size = "Population", title = "2007") +
+        ```
+
+    *   Faded Problem
+
+        ```
+        ggplot(data, aes(________)) +
+          geom_smooth(method = ________, color = "black", size = 2) +
+          geom_point() +
+          scale_size(range = c(________)) +
+          scale_x_log10() +
+          labs(x = "GDP/capita [adjusted US$]", y = "Life Expectancy [years]", 
+               size = "Population [millions]", title = "2007") +
+          theme_classic(________) +
+          theme(axis.title = ________)
+        ```
 
 ### Tidy Data Structure
 
 *   Teaching: 5 min
-*   Exercises: 5 min (Faded Problem to get `data.frame` for 'Faceted Table')
     *   Time series data
+*   Exercises: 5 min 
+    *   Faded Problem: get `data.frame` near to 'Faceted Table'
+
+        ```
+        pop_by_continent <- ________ %>%
+          gather(year, population, ________) %>%
+          separate(________, c("pop", "year"), sep = "_") %>%
+          select(continent, country, ________, ________)
+        ```
+
+    *   Faded Problem: subset data for 2007
+
+        ```
+        pop_2007 <- filter(________)
+        ```
 
 ### Faceted Table of Histogram Bar Charts
 
 *   Teaching: 5 min
-*   Exercises: 15 min
     *   Comparison among many items/categories
     *   "How was the world population distributed among continents in 2007?"
     *   `facet_grid()`
     *   `lims()`
+*   Exercises: 15 min
+    *   Fix the Code
+
+        ```
+        ggplot(pop_2007, aes(year)) +
+          geom_histogram(binwidth=0.5) +
+          scale_x_log10(limits = c(0.1, 10))
+          facet_grid(continent ~ .) +
+          labs(x = Population [millions], y = Number of countries, 
+               title = "2007") +
+          theme_bw(base_size = 42, base_family = "Script") +
+          theme(axis.title=element_text(size=36))
+        ```
 
 ### Stacked Area Chart
 
 *   Teaching: 5 min
-*   Exercises: 15 min
     *   Composition changing over time
     *   "How has the composition of the world population among continents changed from 1952-2007?"
     *   `geom_line()`, `geom_area()`
     *   `guide_legend()`
-    *   Final Assessment
+*   Exercises: 15 min
+    *   Final Assessment 
+        *   Given the 'bad example', generate a publication quality figure.
+        *   Students will have to modify code from `geom_line()` to 
+            `geom_area()` and add labels and theme layers.
 
 ### Wrap-Up
 
@@ -234,3 +376,4 @@ How do I...
 [good-chart]: http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
 [instructor-training]: https://swcarpentry.github.io/instructor-training/
 [swc-website]: http://software-carpentry.org
+[code-solution]: https://github.com/swcarpentry/visualization-novice/blob/gh-pages/code/Final-assessment-soln.R
