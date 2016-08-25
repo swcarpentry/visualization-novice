@@ -127,9 +127,9 @@ names(data)
 >
 > How many rows are in the Gapminder Data?
 >
-> A.  6  
-> B.  38  
-> C.  142  
+> A.  6 
+> B.  38
+> C.  142
 > D.  2007
 >
 > > ## Answer
@@ -139,9 +139,9 @@ names(data)
 > 
 > How many columns are in the Gapminder Data?
 >
-> A.  6  
-> B.  38  
-> C.  142  
+> A.  6
+> B.  38
+> C.  142
 > D.  2007
 >
 > > ## Answer
