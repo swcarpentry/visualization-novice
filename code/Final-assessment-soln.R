@@ -16,7 +16,8 @@ Africa <- filter(data, continent=="Africa")
 
 # Bad
 ggplot(Africa, aes(log10(pop_2007))) +
-  geom_histogram()
+  geom_histogram() +
+  labs(x = "Log10( 2007 Population )", y = "Count")
 
 # Good
 ggplot(Africa, aes(log10(pop_2007), ..count..)) +
