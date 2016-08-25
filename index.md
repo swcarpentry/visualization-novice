@@ -24,4 +24,4 @@ how to implement construction of the graphic using `ggplot2`.
 
 [good-chart]: http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html
 [R-ecology-lesson]: http://www.datacarpentry.org/R-ecology-lesson/
-[setup]: http://swcarpentry.github.io/visualization-novice/setup/
+[setup]: {{ site.baseurl }}/setup/
