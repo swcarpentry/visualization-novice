@@ -19,7 +19,7 @@ objectives:
 - "To access `help()`, vignette tutorials, and online documentation"
 - "To interpret common error/warning messages from `dplyr` and `ggplot2`"
 keypoints:
-- "`dplyr` is one useful too to manipulate, summarize, and analyze data."
+- "`dplyr` is one useful tool to manipulate, summarize, and analyze data."
 - "`ggplot2` is one useful tool to visualize and analyze data."
 - "A clearly defined research question is essential to a successful analysis
   and graphical representation of the results."
