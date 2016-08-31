@@ -12,12 +12,12 @@ keypoints:
 - "Use `ggplot2` to visualize and analyze data." 
 ---
 
-Implement line histogram for "How was the population of Africa distributed
+Implement histogram for "How was the population of Africa distributed
 across the continent by country in 2007?"
 
 > ## `ggplot` Shuffle Challenge
 >
-> Rearrange the following code to generate a line histogram.
+> Rearrange the following code to generate a histogram.
 >
 > ~~~
 > geom_histogram() +
@@ -28,7 +28,7 @@ across the continent by country in 2007?"
 >
 > > ## Output Solution
 > >
-> > ![line histogram][line-histogram-bad]
+> > ![histogram][histogram-bad]
 > {: .solution}
 >
 > > ## Code Solution
@@ -42,4 +42,4 @@ across the continent by country in 2007?"
 > {: .solution}
 {: .challenge}
 
-[line-histogram-bad]: {{ site.baseurl }}/fig/line-histogram-bad.jpeg
+[histogram-bad]: {{ site.baseurl }}/fig/histogram-bad.jpeg
