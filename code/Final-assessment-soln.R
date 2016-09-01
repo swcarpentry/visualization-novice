@@ -31,7 +31,7 @@ ggplot(Africa, aes(log10(pop_2007), ..count..)) +
 ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
   geom_smooth() +
   geom_point() +
-  labs(x = "gdpPercap", y = "lifeExp", size = "Population", title = "2007") +
+  labs(x = "gdpPercap", y = "lifeExp", size = "pop", title = "2007") +
   theme_classic()
 
 # Good
