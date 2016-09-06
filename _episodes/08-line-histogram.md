@@ -18,7 +18,10 @@ Walk through decision making steps from question to chart.
 -   Single variable distribution with many points
 -   Line Histogram
 
-Implement line histogram. 
+Implement line histogram.
+
+-   `geom_histogram()`
+-   `geom_density()`
 
 > ## Line Histogram Fill-in Challenge
 >
