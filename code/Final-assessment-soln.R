@@ -31,7 +31,7 @@ ggplot(Africa, aes(log10(pop_2007), ..count..)) +
 ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
   geom_smooth() +
   geom_point() +
-  labs(x = "gdpPercap", y = "lifeExp", size = "Population", title = "2007") +
+  labs(x = "gdpPercap", y = "lifeExp", size = "pop", title = "2007") +
   theme_classic()
 
 # Good
@@ -62,9 +62,18 @@ ggplot(pop_2007, aes(log10(population))) +
 
 # Good
 ggplot(pop_2007, aes(population/1000000)) +
-  geom_histogram(binwidth=0.5) +
+  geom_histogram(binwidth = 0.5) +
   scale_x_log10(limits = c(0.1, 1000)) +
   facet_grid(. ~ continent) +
+  labs(x = "Population [millions]", y = "Number of countries", title = "2007") +
+  theme_bw(base_size = 24, base_family = "Helvetica") +
+  theme(axis.title = element_text(size = 36))
+
+# Alternate 'off-target' example
+ggplot(pop_2007, aes(x = population/1000000, y = ..count.., fill = continent)) +
+  geom_density(alpha = 0.6) +
+  geom_histogram(data=filter(pop_2007, continent=="Oceania"), alpha = 0.6) +
+  scale_x_log10(limits = c(0.1, 1000)) +
   labs(x = "Population [millions]", y = "Number of countries", title = "2007") +
   theme_bw(base_size = 24, base_family = "Helvetica") +
   theme(axis.title = element_text(size = 36))

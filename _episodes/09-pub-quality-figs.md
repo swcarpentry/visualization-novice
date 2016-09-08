@@ -13,6 +13,12 @@ keypoints:
 - "Publication quality figures are often accompanied by a descriptive caption." 
 ---
 
+`ggplot2` customization for publication quality figures
+
+- `labs()`
+- `theme()`
+- `guide_legend()`
+
 > ## Line Histogram Fill-in Challenge Continued
 >
 > Fill in the missing pieces of the following code to generate a publication
