@@ -13,6 +13,26 @@ keypoints:
 - "A well detailed research question can be answered with a good chart." 
 ---
 
+## Gapminder Ignorance Project
+
+[Gapminder][about-gapminder] is a "fact tank" from Sweden that maintains data and teaching resources about global development. Gapminder promotes a fact-based
+world view from a deeper understanding of reliable statistics. From their data,
+we can begin to formulate some research questions to explore:
+
+What are the major trends in global populations and economies?
+
+How is the world population distributed among countries and continents?
+
+How is population linked to economies and health?
+
+Has that changed over time?
+
+## Good Research Questions
+
+Good research questions are falsifiable/verifiable with data. They are well-defined and have a clear research outcome or set of outcomes.
+
+## Research questions lead to clear data visualizations. 
+
 > ## Scientific Question Challenge
 >
 > Match `Column A` with `Column B`.
@@ -36,3 +56,5 @@ keypoints:
 > >   continents changed from 1952-2007?
 > {: .solution}
 {: .challenge}
+
+[about-gapminder]: https://www.gapminder.org/about-gapminder/
