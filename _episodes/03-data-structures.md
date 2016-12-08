@@ -23,6 +23,23 @@ keypoints:
   categories."
 ---
 
+## Data structure is the shape and content of your data.
+
+The shape of your data ought to be rectangular and can be described by the number of rows and columns.
+
+Column in your data can also be called 'variables' or 'fields'. However, the general use of the term 'variable' to describe a column can also be used more specifically to describe numerically continuous data. As a complement to this specific use of 'variables', 'categories' describe discrete or categorical data that can be organized in groups.
+
+'Values' make up the rows of the data and are more specifically associated with
+cells in a data table. 'Values' can represent numerical or categorical data.
+Numerical values should be recognized as 'absolute' or 'relative'. 'Absolute'
+values receive context by their units, while 'relative' values are standardized
+in some fashion (i.e., proportion, per unit) and most often used for comparison
+among categories.
+
+Rows of data may represent observational or experimental 'replicates'. Most
+generally, 'replicates' are values with similar variables and categories that
+are evaluated in data analysis.
+
 > ## Data Organization Challenge
 >
 > What years are represented in the Gapminder data?
@@ -42,3 +59,13 @@ keypoints:
 > > A.  `country`, because it is a 'categorical' variable
 > {: .solution}
 {: .challenge}
+
+## Tidy data follows a set of rules.
+
+These rules keep data well organized and ready for analysis.
+
+1. Order doesn’t matter
+2. No duplicate rows
+3. Every cell contains one value
+4. One column per type of information
+5. No redundant information
