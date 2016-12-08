@@ -25,7 +25,9 @@ keypoints:
   and graphical representation of the results."
 ---
 
-**Welcome to the Software Carpentry lesson on Data Visualization for novices**
+## Welcome to the Software Carpentry lesson on Data Visualization for novices
+
+### Setup
 
 Make sure you have followed the [setup instructions][setup] before moving onto
 the next episodes.
@@ -39,6 +41,10 @@ install.packages("tidyr")
 install.packages("ggplot2")
 ~~~
 {: .r}
+
+### Prerequisites
+
+This lesson is designed for novice programmers that are already familiar with basic data management using basic R function and the `dplyr` package.
 
 [setup]: {{ site.baseurl }}/setup/
 
