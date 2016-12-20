@@ -12,6 +12,20 @@ keypoints:
 - "Use `ggplot2` to visualize and analyze data." 
 ---
 
+Suppose you were asked to draw a graph. Before drawing, you would 
+possibly have several questions on how to draw is. For instance, 
+which __data__ should be __mapped__ to the plot:  is it the relationship 
+between a categorical and a continuous variable, 
+or the relationship between two continuous variable? Similarly, which
+__geometrical__ representations should you use: a bar, a point or a density
+line? Once you determine these informations, how does the appearance, the
+__aesthetic__, of the geometrical elements would look like? It is this 
+reasoning from the Grammar of Graphicas that it is used in the
+`ggplot2` package.
+
+`ggplot2` implements the notion that every plot is drawn by adding layers
+on top of one another - just like as if you were drawing.
+
 Implement histogram for "How was the population of Africa distributed
 across the continent by country in 2007?"
 
