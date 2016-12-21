@@ -26,7 +26,7 @@ line?
  elements: are they going to be colored or filled? If they are a point, should it 
 be a circle, a square or a triangle?
 
-It is this reasoning from the Grammar of Graphics that is used to create plots in the
+It is this reasoning from the [Grammar of Graphics](http://www.springer.com/us/book/9780387245447) that is used to create plots in the
 `ggplot2` package.
 
 Implement histogram for "How was the population of Africa distributed
