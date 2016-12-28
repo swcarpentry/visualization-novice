@@ -12,21 +12,51 @@ keypoints:
 - "Multiple good charts can address a single scientific question."
 ---
 
-Build student independence to walk through decision making steps from question
-to chart.
+> ## Our research question is: 
+>
+> How was the world population distributed among continents in 2007?
+{: .checklist}
 
--   "How was the world population distributed among continents in 2007?"
--   Comparison among many items or categories
--   Faceted table of histogram bar charts
+> ## What is it's category?
+>
+> It is a __comparison__. 
+{: .solution} 
 
-Implement faceted table of histograms.
+> ## What is being compared: items? or time?
+>
+> Items are being compared: `population` and `continent`.
+{: .solution}
 
--   `facet_grid()`
--   `lims()`
+> ## Is there a single variable? or two variables?
+>
+> There is __one variable__: `population`.
+{: .solution}
+
+> ## Are there few categories? or many?
+>
+> There are __many categories__: `continent`. 
+{: .solution}
+
+> ## So we choose to make a:
+>
+> __Table with embedded charts__ or a "faceted bar chart"
+{: .discussion}
+
+
+When seeking to compare the graphics of multiple categories, you can build a table of graphics using [`facet_grid()`][grid] or [`facet_wrap()`][wrap]  
+
+~~~
+ggplot(data, aes(pop_2007)) +
+  geom_histogram() +
+  facet_grid(. ~ continent)
+~~~
+{: .r}
 
 > ## Fix the Faceted Table Code Challenge
 >
-> Fix the code to generate a faceted table of histograms.
+> Fix the code to generate a faceted table of histograms using the data table 
+> generated in the `dplyr` Review Fill-in Challenge from [Lesson 12: Tidy Data
+> Structure][tidyr].
 >
 > ~~~
 > ggplot(pop_2007, aes(year)) +
@@ -86,5 +116,8 @@ Implement faceted table of histograms.
 > {: .solution}
 {: .discussion}
 
+[grid]: http://docs.ggplot2.org/current/facet_grid.html
+[wrap]: http://docs.ggplot2.org/current/facet_wrap.html
+[tidyr]: {{ site.baseurl }}/12-tidyr
 [faceted-histogram]: {{ site.baseurl }}/fig/faceted-histogram.jpeg
 [grouped-density]: {{ site.baseurl }}/fig/grouped-density.jpeg
