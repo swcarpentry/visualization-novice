@@ -43,10 +43,10 @@ Charts can take on endless forms and customizations to address your research que
 
 Dr. Andrew Abela from Catholic University of America and 'Extreme Presentation'
 put together a decision making tree for ["Choosing a Good Chart"][good-chart]
-that we will draw from for this lesson. He breaks up data visualization into
-four main categories: distribution, relationship, comparison, or composition. 
-Our lesson will work through each of these categories (described by 
-[this reference][chart-categories-view] [from Qlik][chart-categories-source]) 
+([Book Reference][cite]) that we draw from for this lesson. He breaks up data
+visualization into four main categories: distribution, relationship, comparison,
+or composition. Our lesson will work through each of these categories (described
+by [this reference][chart-categories-view] [from Qlik][chart-categories-source]) 
 to define a research question and generate a data visualization to address the
 question.
 
@@ -94,5 +94,6 @@ absolute difference (i.e, value  of total).
 
 [about-gapminder]: https://www.gapminder.org/about-gapminder/
 [good-chart]: http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
+[cite]: https://www.amazon.com/Advanced-Presentations-Design-Creating-Communication/dp/1118347919/ref=asap_bc?ie=UTF8
 [chart-categories-view]: https://community.qlik.com/servlet/JiveServlet/previewBody/7816-102-2-10600/Choosing-A-GoodChart-Dissected-FINAL.pdf
 [chart-categories-source]: https://community.qlik.com/docs/DOC-7816
