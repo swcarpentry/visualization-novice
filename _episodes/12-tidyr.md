@@ -12,6 +12,8 @@ keypoints:
 - "Tidy data has one value per cell and all similar values in a single column." 
 ---
 
+## Tidy data structure
+
 Tidy data structure rules:
 
 1.  Order doesn’t matter
@@ -24,12 +26,51 @@ Restructure tables with messy data.
 
 ![Table Restructure][table-restructure]
 
-Important `tidyr` functions:
+## Gapminder is not quite tidy
 
-- gather()
-- separate()
+The Gapminder data time series is stored cross-tabulated with each type of
+information (such as population, GDP,or life expectancy) are represented by
+multiple columns for each year that the information was collected. This violates
+rule #4 ("One column per type of information"). Our remaining research questions
+use time series data, so we are going to have to tidy up the data to help our
+analysis and visualization.
 
-Gapminder `data` time series is stored cross-tabulated.
+## The `tidyr` functions
+
+The [`tidyr` package][tidyr] helps restructure data to make it easier to 
+analyze. 
+
+`gather()` removes redundant columns and makes the data longer by setting the
+redundant columns into rows. It takes multiple arguments:
+
+* `data.frame` *that can be piped*
+* Column name for grouping of old column headers
+* Column name for grouping of old column values
+* Column range for old columns with values
+
+~~~
+pop_year_gather <- data %>%
+  gather(year, population, pop_1952:pop_2007)
+~~~
+{: .r}
+
+This data restructure moves the names of the redundant columns into row values.
+But the column names like `"pop_2007"` then violate rule #3 ("Every cell
+contains one value").  
+
+`separate()` splits multiple values in a single column to multiple columns. It
+takes multiple arguments:
+
+* `data.frame` *that can be piped*
+* Column name
+* New column names
+* Separator value or character
+
+~~~
+pop_year_separate <- data %>%
+  separate(year, c("pop", "year"), sep = "_")
+~~~
+{: .r}
 
 
 > ## `tidyr` Fill-in Challenge
@@ -120,3 +161,4 @@ Gapminder `data` time series is stored cross-tabulated.
 {: .challenge}
 
 [table-restructure]: http://www.datacarpentry.org/semester-biology/materials/database-struct-multiple-habitat-values.png
+[tidyr]: https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html
