@@ -29,7 +29,8 @@ several questions on how to do it:
    - are they going to be colored or filled? 
    - what should be their shape?
 
-This series of questions portrays the process used by the [Grammar of Graphics](http://www.springer.com/us/book/9780387245447) to determine the composition of
+This series of questions portrays the process used by the [Grammar of Graphics]
+[grammar-graphics] to determine the composition of
 a desired chart. This same process can be used to choose the a good chart an to 
 create plots in the `ggplot2` package.
 
@@ -39,16 +40,15 @@ if you were drawing*.
 
 ## `ggplot2` basics
 
-[`ggplot()`](http://docs.ggplot2.org/current/ggplot.html) takes two main
-arguments: a dataset and a set of mappings. Mappings are the __aesthetics__
-defined by `aes()`.
+[`ggplot()`][ggplot] takes two main arguments: a dataset and a set of mappings.
+Mappings are the __aesthetics__ defined by `aes()`.
 
 ~~~
 ggplot(africa, aes(x = pop_2007))
 ~~~
 {: .r}
 
-Add the components of a figure using layers such as [`geom_histogram()`](http://docs.ggplot2.org/current/geom_histogram.html). 
+Add the components of a figure using layers such as [`geom_histogram()`][hist]. 
 Layers are connected by a `+`.
 
 ~~~
@@ -66,7 +66,7 @@ ggplot(africa, aes(x = log10(pop_2007))) +
 {: .r}
 
 You can also rescale variables with an additional layer such as
-[`scale_continuous()`](http://docs.ggplot2.org/current/scale_continuous.html).
+[`scale_continuous()`][scale].
 
 ~~~
 ggplot(africa, aes(x = pop_2007)) +
@@ -76,7 +76,7 @@ ggplot(africa, aes(x = pop_2007)) +
 {: .r}
 
 Many components of your figure can be modified using additional layers such as
-[`labs()`](http://docs.ggplot2.org/current/labs.html).
+[`labs()`][labs].
 
 ~~~
 ggplot(africa, aes(x = pop_2007)) +
@@ -119,4 +119,9 @@ should use a line histogram or density plot.
 > {: .solution}
 {: .challenge}
 
+[grammar-graphics]: http://www.springer.com/us/book/9780387245447
+[ggplot]: http://docs.ggplot2.org/current/ggplot.html
+[hist]: http://docs.ggplot2.org/current/geom_histogram.html
+[scale]: http://docs.ggplot2.org/current/scale_continuous.html
+[labs]: http://docs.ggplot2.org/current/labs.html
 [histogram-bad]: {{ site.baseurl }}/fig/histogram-bad.jpeg
