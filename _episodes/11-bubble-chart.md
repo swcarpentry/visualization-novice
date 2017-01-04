@@ -17,7 +17,7 @@ keypoints:
 > across the world per country in 2007?
 {: .checklist}
 
-> ## What is it's category?
+> ## What is its category?
 >
 > It is a __relationship__. 
 {: .solution} 

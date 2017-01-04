@@ -19,13 +19,10 @@ keypoints:
 world view from a deeper understanding of reliable statistics. From their data,
 we can begin to formulate some research questions to explore:
 
-What are the major trends in global populations and economies?
-
-How is the world population distributed among countries and continents?
-
-How is population linked to economies and health?
-
-Has that changed over time?
+* What are the major trends in global populations and economies?
+* How is the world population distributed among countries and continents?
+* How is population linked to economies and health?
+* Has that changed over time?
 
 ## Good Research Questions
 
@@ -41,8 +38,8 @@ Charts can take on endless forms and customizations to address your research que
 
 ## Defining your research question for visualization
 
-Dr. Andrew Abela from Catholic University of America and 'Extreme Presentation'
-put together a decision making tree for ["Choosing a Good Chart"][good-chart]
+[Dr. Andrew Abela][abela] from the Catholic University of America put together a
+decision making tree for ["Choosing a Good Chart"][good-chart]
 ([Book Reference][cite]) that we draw from for this lesson. He breaks up data
 visualization into four main categories: distribution, relationship, comparison,
 or composition. Our lesson will work through each of these categories (described
@@ -93,6 +90,7 @@ absolute difference (i.e, value  of total).
 {: .challenge}
 
 [about-gapminder]: https://www.gapminder.org/about-gapminder/
+[abela]: http://business.cua.edu/faculty/abela.cfm
 [good-chart]: http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
 [cite]: https://www.amazon.com/Advanced-Presentations-Design-Creating-Communication/dp/1118347919/ref=asap_bc?ie=UTF8
 [chart-categories-view]: https://community.qlik.com/servlet/JiveServlet/previewBody/7816-102-2-10600/Choosing-A-GoodChart-Dissected-FINAL.pdf

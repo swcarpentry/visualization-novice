@@ -13,6 +13,8 @@ keypoints:
 - "Publication quality figures are often accompanied by a descriptive caption." 
 ---
 
+## What makes figures publication quality?
+
 Publication quality figures are clean and direct data visualizations that
 clearly illustrate your conclusion to the research question. Publication quality
 figures should include only the necessary data and visualization elements to
@@ -21,6 +23,17 @@ All visualization elements are clearly labeled and/or included in a legend and
 are described in the accompanying caption for the graphic. These elements
 include the axis, data shape and color, and any statistical elements giving
 analytical context to the data.
+
+> ## Use common sense to determine your figure quality needs.
+>
+> Not all figures need to be publication quality. It is OK to cut corners,
+> experiment, and generate less-than-publication-quality figures sometimes.
+> Personal data exploration and in-house reports are some of the few instances
+> where visual quality might get compromised. Of course, the ["message trumps
+> beauty"][better-figures]. Data and results must remain clearly illustrated.
+{: .callout} 
+
+## Getting your figure to look good
 
 `ggplot2` makes development and customization of publication quality figures easy through the use of layers such as [`labs()`][labs], [`theme()`][theme], and
 [`guide_legend()`][legend].
@@ -104,6 +117,7 @@ ggplot(Africa, aes(log10(pop_2007), ..count..)) +
 > {: .solution}
 {: .challenge}
 
+[better-figures]: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833#s10
 [labs]: http://docs.ggplot2.org/current/labs.html
 [theme]: http://docs.ggplot2.org/current/theme.html
 [legend]: http://docs.ggplot2.org/current/guide_legend.html

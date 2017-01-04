@@ -63,10 +63,13 @@ are evaluated in data analysis.
 
 ## Tidy data follows a set of rules.
 
-These rules keep data well organized and ready for analysis.
+These rules for [tidy data][tidy-data] keep data well organized and ready for
+analysis.
 
 1. Order doesn’t matter
 2. No duplicate rows
 3. Every cell contains one value
 4. One column per type of information
 5. No redundant information
+
+[tidy-data]: http://vita.had.co.nz/papers/tidy-data.pdf

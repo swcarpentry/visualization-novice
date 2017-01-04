@@ -9,7 +9,7 @@ objectives:
 - "To read Gapminder data to R"
 - "To evaluate Gapminder data structure"
 keypoints:
-- "Be sure to setup an RStudio project or `setwd()` to point to your data file
+- "Be sure to set up an RStudio project or `setwd()` to point to your data file
   before importing it."
 - "Import data using `read.csv()`."
 - "Familiarize yourself with your data and its structure prior to analysis."

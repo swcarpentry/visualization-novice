@@ -17,7 +17,7 @@ keypoints:
 > How was the world population distributed among continents in 2007?
 {: .checklist}
 
-> ## What is it's category?
+> ## What is its category?
 >
 > It is a __comparison__. 
 {: .solution} 

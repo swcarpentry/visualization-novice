@@ -52,12 +52,14 @@ opportunity to prepare the [data][data] for the lesson examples.
 
 ### Audience
 
-Have you ever seen a figure that tried to convey way too much? Or a figure that just didn't seem to give you any useful information?
+Have you ever seen a figure that tried to convey way too much? Or a figure that just didn't seem to give you any useful information? Have you ever worried that
+you've created such figures yourself, and wondered if there was a reliable way
+to do better?
 
 This lesson is for scientists that are getting started using R to analyze their
 data and want to know more about data visualization using `ggplot2` and want to
 practice choosing the best figure to present their data and data analysis. The
-lesson should prepare you to choose and generate the best publication quality chart to answer your research question.
+lesson should prepare you to choose and generate the best publication quality chart to address your research question.
 
 ### Goals
 

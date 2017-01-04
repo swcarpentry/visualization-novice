@@ -17,7 +17,7 @@ keypoints:
 > from 1952-2007?
 {: .checklist}
 
-> ## What is it's category?
+> ## What is its category?
 >
 > It is a __composition__. 
 {: .solution} 
