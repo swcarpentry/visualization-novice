@@ -1,31 +1,46 @@
 ---
-title: "Generating a Line Histogram"
+title: "Generating a Density Plot"
 teaching: 10
 exercises: 10
 questions:
-- "What kind of scientific question does a line histogram address?"
-- "How do I generate a line histogram with `ggplot2`?"
+- "What kind of scientific question does a density plot address?"
+- "How do I generate a density plot with `ggplot2`?"
 objectives:
-- "To generate a line histogram using `ggplot2`"
+- "To generate a density plot using `ggplot2`"
 keypoints:
-- "Line histograms represent a single variable distributions with many points." 
+- "Density plots are single variable distributions for many points." 
 ---
 
-Walk through decision making steps from question to chart.
+In [Lesson 06: Choosing A good Chart][good-chart] we determined that the
+research question "How was the population of Africa distributed across the
+continent by country in 2007?" would be best addressed by a line histogram.
+
+Then, in [Lesson 07: ggplot2 Basics][ggplot] we generated a basic histogram that
+represents the data values as bars. A more effective visual representation of
+many data points is a line histogram or what most R folks call, a __density
+plot__. The `ggplot2` layer for a density plot is [`geom_density()`][geom-density].
  
--   "How was the population of Africa distributed across the continent by 
-    country in 2007?"
--   Single variable distribution with many points
--   Line Histogram
 
-Implement line histogram.
+~~~
+ggplot(Africa, aes(x = pop_2007)) +
+  geom_density()
+~~~
+{: .r}
 
--   `geom_histogram()`
--   `geom_density()`
+`geom_density()` shows a density estimate on the y-axis by default. If you are interested in the count of values along the x-axis for a clearer quantitative
+description of the population distribution you can set the y-axis to
+`..count..`. Values that `ggplot2` calculates behind the scenes are named with
+the `..   ..` convention, such as `..count..`.
 
-> ## Line Histogram Fill-in Challenge
+~~~
+ggplot(Africa, aes(x = pop_2007, y = ..count..)) +
+  geom_density()
+~~~
+{: .r}
+
+> ## Density Plot Fill-in Challenge
 >
-> Fill in the missing pieces of the following code to generate a line histogram.
+> Fill in the missing pieces of the following code to generate a density plot.
 >
 > ~~~
 > ggplot(Africa, aes(________, ..count..)) +
@@ -50,4 +65,7 @@ Implement line histogram.
 > {: .solution}
 {: .challenge}
 
+[good-chart]: {{ site.baseurl}}/06-good-chart/
+[ggplot]: {{ site.baseurl}}/07-ggplot/
+[geom-density]: http://docs.ggplot2.org/current/geom_density.html
 [line-histogram-bad]: {{ site.baseurl }}/fig/line-histogram-bad.jpeg

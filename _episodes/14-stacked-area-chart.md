@@ -11,18 +11,71 @@ keypoints:
 - "Stacked area charts represent a composition changing over time."
 ---
 
-Let students walk through decision making steps from question
-to chart.
+> ## Our research question is: 
+>
+> How has the composition of the world population among continents changed
+> from 1952-2007?
+{: .checklist}
 
--   "How has the composition of the world population among continents changed
-    from 1952-2007?"
--   Composition changing over time
--   Stacked area chart
+> ## What is its category?
+>
+> It is a __composition__. 
+{: .solution} 
 
-Implement faceted table of histograms.
+> ## Is the variable changing over time? or static?
+>
+> The variable `population` is __changing over time__.
+{: .solution}
 
--   `geom_line()`, `geom_area()`
--   `guide_legend()`
+> ## Are there few periods? or many?
+>
+> There are __many periods__: 1952-2007.
+{: .solution}
+
+> ## Do only relative differences matter? or relative and absolute?
+>
+> __Relative and absolute__ differences matter.
+{: .solution}
+
+> ## So we choose to make a:
+>
+> __Stacked area chart__
+{: .discussion}
+
+The research question motivates an analysis that groups the countries in each `continent` to get a total population for each year. We can use `dplyr` to
+`summarize()` the `population` data from our tidy data `pop_by_continent` into
+`sum()` for each `continent`.
+
+~~~
+total_pop_continent<- pop_by_continent %>%
+  group_by(continent, year) %>%
+  summarize(tot_pop = sum(population)/1000000000)
+~~~
+{: .r}
+ 
+To visualize this data as a stacked area chart, we can use [`geom_line()`][geom-line] 
+with an optional argument `position = "stack"`.
+
+~~~
+ggplot(total_pop_continent, aes(as.numeric(year), tot_pop, 
+       group = continent)) +
+  geom_line(position = "stack")
+~~~
+{: .r}
+
+*The `as.numeric()` is needed to modify `year` because it was set as a
+`"character"` by default by `tidyr`.*
+
+[`geom_area()`][geom-area] is a much more visually appealing function for
+grouped data.
+
+~~~ 
+ggplot(total_pop_continent, aes(as.numeric(year), tot_pop, 
+       fill = continent)) + 
+  geom_area() +
+  labs(fill = "Continent")
+~~~
+{: .r}
 
 > ## Chart Improvement Challenge
 >
@@ -62,5 +115,7 @@ Implement faceted table of histograms.
 > {: .solution}
 {: .challenge}
 
+[geom-line]: http://docs.ggplot2.org/current/geom_path.html
+[geom-area]: http://docs.ggplot2.org/current/geom_ribbon.html
 [stacked-line]: {{ site.baseurl }}/fig/stacked-line.jpeg
 [stacked-area]: {{ site.baseurl }}/fig/stacked-area.jpeg

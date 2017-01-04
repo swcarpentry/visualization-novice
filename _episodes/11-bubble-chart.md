@@ -11,18 +11,46 @@ keypoints:
 - "Bubble charts represent a relationship with three variables" 
 ---
 
-Lead students to walk through decision making steps from question to chart.
+> ## Our research question is: 
+>
+> What is the relationship of GDP per capita, life expectancy, and population
+> across the world per country in 2007?
+{: .checklist}
 
--   "What is the relationship of GDP per capita, life expectancy, and population
-    across the world per country in 2007?"
--   Relationship with three variables (*at least two are continuous*)
--   Bubble Chart
+> ## What is its category?
+>
+> It is a __relationship__. 
+{: .solution} 
 
-Implement bubble chart.
+> ## Are there two or three numerical data points?
+>
+> There are __three variable__. All are continuous variables.
+{: .solution}
 
--   `geom_point()`
--   `geom_smooth()`
--   `scale_manual()`
+> ## So we choose to make a:
+>
+> __Bubble chart__
+{: .discussion}
+
+Bubble charts use [`geom_point()`][geom-point] to add a scatter plot for two
+continuous variables and then can modify the `size`, `color`, or `shape` with
+the third variable to make it a bubble chart.
+
+~~~
+ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
+  geom_point()
+~~~
+{: .r}
+
+[`geom_smooth()`][geom-smooth] adds a regression line to the graphic using a
+`"Loess"` method by default. The `method = lm` argument sets a ordinary least squares linear model. The layer also adds 95% confidence intervals by default.
+
+~~~
+ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
+  geom_point() +
+  geom_smooth()
+~~~
+{: .r}
 
 > ## Bubble Chart Sort and Fill-in Challenge
 >
@@ -56,6 +84,17 @@ Implement bubble chart.
 > {: .solution}
 {: .challenge}
 
+The [`scale_manual()`][scale-manual] set of functions helps you customize the
+data elements of the graphic for clear visualization.
+
+~~~
+ggplot(data, aes(x = gdpPercap_2007, y = lifeExp_2007, size = pop_2007)) +
+  geom_point() +
+  geom_smooth() +
+  scale_size(range = c(2, 20))
+~~~
+{: .r}
+ 
 > ## Publication Quality Bubble Chart Fill-in Challenge
 >
 > Fill in the missing pieces of the following code to generate a publication
@@ -97,5 +136,7 @@ Implement bubble chart.
 > {: .solution}
 {: .challenge}
 
+[geom-point]: http://docs.ggplot2.org/current/geom_point.html
+[geom-smooth]: http://docs.ggplot2.org/current/geom_smooth.html
 [bubble-chart-bad]: {{ site.baseurl }}/fig/bubble-chart-bad.jpeg
 [bubble-chart-good]: {{ site.baseurl }}/fig/bubble-chart-good.jpeg

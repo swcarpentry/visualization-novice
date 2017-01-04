@@ -10,10 +10,48 @@ keypoints:
 - "A good chart directly and clearly addresses a scientific question." 
 ---
 
-Introduce [Choosing a Good Chart][good-chart].
+## Simple steps to choosing a good chart
 
-Break down chart decision for: "How was the population of Africa distributed
-across the continent by country in 2007?"
+1. Identify/define the research question you wish to address.
+2. Determine the broad category that describes the goal of your research
+   question from [Choosing a Good Chart][good-chart]. 
+   - *You may need to redefine
+   or focus your research question to better suit visualization.*
+3. Follow the decision making tree in [Choosing a Good Chart][good-chart] to
+   determine which chart is the most appropriate for addressing your research
+   question.
+4. Determine the components of the chosen chart that best reveal your conclusion
+   of the research question to highlight.
+
+## The first example
+
+> ## Our research question is: 
+>
+> How was the population of Africa distributed across the continent by country
+> in 2007?
+{: .checklist}
+
+> ## What is its category?
+>
+> It is a __distribution__. 
+{: .solution} 
+
+> ## Is there a single variable? or two variables?
+>
+> There is __one variable__: `population`.
+{: .solution}
+
+> ## Are there few data points? or many?
+>
+> There are __many data points__. Africa has 52 countries.
+{: .solution}
+
+> ## So we choose to make a:
+>
+> __Line histogram__ or "density plot"
+{: .discussion}
+
+## Some practice
 
 > ## Good Chart Challenge
 >
